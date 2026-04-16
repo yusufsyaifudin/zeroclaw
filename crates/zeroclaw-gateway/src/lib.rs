@@ -1363,7 +1363,10 @@ async fn run_gateway_chat_simple(
     state
         .provider
         .chat(
-            zeroclaw_api::provider::ChatRequest { messages: &prepared.messages, tools: None },
+            zeroclaw_api::provider::ChatRequest {
+                messages: &prepared.messages,
+                tools: None,
+            },
             &state.model,
             state.temperature,
         )
